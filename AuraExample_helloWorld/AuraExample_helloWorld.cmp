@@ -1,0 +1,18 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable">
+    <!-- Here is a very basic aura:attribute, the one included in the slides -->
+    <aura:attribute 
+        name="whom" 
+        type="String"
+        default="world"
+        required="false"
+        access="public"
+        description="Name of the current user"
+    />
+
+    <!-- Here, we use the "v." value provider to display our attribute.
+         As you see, when rendered on our Lightning App Builder page, {!v.whom} 
+            evaluates to "world" as a result of the attribute's default value. -->
+    Hello {!v.whom}
+
+<!-- view a record -->
+</aura:component>

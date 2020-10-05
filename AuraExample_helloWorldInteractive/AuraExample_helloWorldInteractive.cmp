@@ -1,0 +1,21 @@
+<!-- AuraExample_helloWorldInteractive -->
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable">
+    <!-- implements "flexipage:availableForAllPageTypes" interface so we can use it with Lightning App Builder -->
+
+    <!-- Define any attributes that we need here
+        Remember to include descriptions! -->
+    <aura:attribute name="message" type="String" description="This holds our message to display based on button click."/>    
+
+    <p>Message of the Day: {!v.message}</p><!-- Displays message on the component. No default value, so nothing shows on load -->
+
+    <div>
+        <!-- Here we have two buttons with two different labels. -->
+        <!-- We use "c." value provider to fire a function in our client-side Javascript Controller -->
+        <lightning:button label="You look fabulous today!" onclick="{!c.handleClick}"/>
+
+        <lightning:button label="Today is going to rock your socks off!" onclick="{!c.handleClick2}"/>
+    </div>
+
+
+
+</aura:component>
